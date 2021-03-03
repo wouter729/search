@@ -173,4 +173,5 @@ dist
 .pnp.*
 
 # Ignore css
-*.css
+style.css
+style.css.map
