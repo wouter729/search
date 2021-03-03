@@ -3,21 +3,21 @@ body {
   font-size: 14px;
 }
 
-#nav_menu ul {
+.nav-menu ul {
   list-style: none;
   padding: 1em 0;
   text-align: right;
 }
 
-#nav_menu ul li {
+.nav-menu ul li {
   display: inline;
   padding: 0 1.5em;
 }
 
-#nav_menu ul li a {
+.nav-menu ul a {
   color: #212121;
-  text-decoration: none;
   font-size: 13px;
+  text-decoration: none;
 }
 
 .top-search-padding {
@@ -36,40 +36,22 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 25px 0;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding: 25px 0;
 }
 
 .search-section .google-query {
+  border: 1px solid #dfe1e5;
+  border-radius: 24px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border-radius: 24px;
-  border: 1px solid #dfe1e5;
   margin-bottom: 24px;
-}
-
-.search-section .google-query input[type=text] {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 100%;
-      -ms-flex: 100%;
-          flex: 100%;
-  border: 0;
-  background-color: transparent;
-  width: 574px;
-  height: 34px;
-  padding: 5px 25px;
-}
-
-.search-section .google-query input[type=text]:focus {
-  outline: none;
 }
 
 .search-section .google-buttons {
@@ -81,12 +63,39 @@ body {
           justify-content: center;
 }
 
-.search-section .google-buttons input[type=button] {
+.search-section input[type='text'] {
+  background-color: transparent;
+  border: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 100%;
+      -ms-flex: 100%;
+          flex: 100%;
+  height: 34px;
+  padding: 5px 25px;
+  width: 574px;
+}
+
+.search-section input[type='text']:focus {
+  outline: none;
+}
+
+.search-section input[type='button'] {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #f8f9fa;
-  padding: 5px 20px;
+  border: 1px solid transparent;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   margin-right: 10px;
+  padding: 5px 20px;
+}
+
+.search-section input[type='button']:hover {
+  background-color: #f8f9fa;
   border: 1px solid #dadce0;
-  color: #202124;
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
           box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 }

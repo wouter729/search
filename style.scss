@@ -1,82 +1,94 @@
+$text-color: #212121;
+$search-color-border: #dfe1e5;
+$background-color: #f8f9fa;
+$box-shadow: rgba(0, 0, 0, .1);
+$button-border: #dadce0;
+
+
 body {
-    font-family: arial, sans-serif;
-    font-size: 14px;
+  font-family: arial, sans-serif;
+  font-size: 14px;
 }
 
 
-#nav_menu {
+.nav-menu {
+  ul {
+    list-style: none;
+    padding: 1em 0;
+    text-align: right;
 
-    ul {
-        list-style: none;
-        padding: 1em 0;
-        text-align: right;
-
-        li {
-            display: inline;
-            padding: 0 1.5em;
-
-            a {
-                color: #212121;
-                text-decoration: none;
-                font-size: 13px;
-            }
-
-        }
+    li {
+      display: inline;
+      padding: 0 1.5em;
     }
+
+    a {
+      color: $text-color;
+      font-size: 13px;
+      text-decoration: none;
+    }
+  }
 }
 
 
 .top-search-padding {
-    padding-top: 8%;
+  padding-top: 8%;
 }
 
 
 .search-section {
-    display: grid;
+  display: grid;
+  justify-content: center;
+
+  .google-logo {
+    display: flex;
     justify-content: center;
+    padding: 25px 0;
+  }
 
-    .google-logo {
-        display: flex;
-        padding: 25px 0;
-        justify-content: center;
+  .google-query {
+    border: 1px solid $search-color-border;
+    border-radius: 24px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 24px;
+  }
+
+  .google-buttons {
+    display: flex;
+    justify-content: center;
+  }
+
+  input {
+    &[type='text'] {
+      background-color: transparent;
+      border: 0;
+
+      display: flex;
+      flex: 100%;
+
+      height: 34px;
+      padding: 5px 25px;
+      width: 574px;
+
+      &:focus {
+        outline: none;
+      }
     }
 
-    .google-query {
-        display: flex;
-        justify-content: center;
-        border-radius: 24px;
-        border: 1px solid #dfe1e5;
-        margin-bottom: 24px;
+    &[type='button'] {
+      align-items: center;
+      background-color: $background-color;
+      border: 1px solid transparent;
+      box-shadow: 0 1px 1px $box-shadow;
+      margin-right: 10px;
+      padding: 5px 20px;
 
-        input[type=text] {
-            display: flex;
-            flex: 100%;
-
-            border: 0;
-            background-color: transparent;
-
-            width: 574px;
-            height: 34px;
-            padding: 5px 25px;
-        }
-
-        input[type=text]:focus {
-            outline: none;
-
-        }
+      &:hover {
+        background-color: $background-color;
+        border: 1px solid $button-border;
+        box-shadow: 0 1px 1px $box-shadow;
+      }
     }
-
-    .google-buttons {
-        display: flex;
-        justify-content: center;
-
-        input[type=button] {
-            background-color: #f8f9fa;
-            padding: 5px 20px;
-            margin-right: 10px;
-            border: 1px solid #dadce0;
-            color: #202124;
-            box-shadow: 0 1px 1px rgba(0, 0, 0, .1);
-        }
-    }
+  }
 }
