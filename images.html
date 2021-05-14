@@ -13,7 +13,7 @@
         <!-- Toolbar  -->
         <nav class="nav-menu">
             <ul>
-                <li><a href="images.html">Images</a></li>
+                <li><a href="index.html">Search</a></li>
                 <li><a href="advanced.html">Advanced</a></li>
             </ul>
         </nav>
@@ -24,25 +24,26 @@
         <div class="search-section">
             <div class="google-logo">
                 <img src="google_logo.png">
+                <div class="image-tag">
+                    <span>Images</span>
+                </div>
             </div>
 
             <form action="https://google.com/search" method="GET">
+                <input type="hidden" name="tbm" value="isch" />
                 <div class="google-query">
                     <input type="text" name="q">
                 </div>
 
                 <div class="google-buttons">
-                    <input type="button" value="Google">
+                    <input type="submit" value="Google">
                     <input type="button" value="I'm Feeling Lucky">
                 </div>
             </form>
         </div>
 
-
         <!-- Footer -->
-        <div class="footer">
-        </div>
-        <div class="footer">
+        <div class="footer-images">
             <ul>
                 <li>Country</li>
             </ul>
@@ -50,9 +51,9 @@
             <hr size="1">
 
             <ul>
-                <li><a href="https://about.google">About</li>
                 <li><a href="https://ads.google.com">Advertising</li>
                 <li><a href="https://www.google.ch/services">Business</li>
+                <li><a href="https://about.google">About</li>
                 <li><a href="https://www.google.com/search/howsearchworks">How Search works</li>
             </ul>
         </div>

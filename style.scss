@@ -3,7 +3,11 @@ $search-color-border: #dfe1e5;
 $background-color: #f8f9fa;
 $box-shadow: rgba(0, 0, 0, .1);
 $button-border: #dadce0;
+$image-tag-color: #4285f4;
 
+$footer-color: #f2f2f2;
+$footer-text-color: #70757a;
+$footer-line-color: #dadce0;
 
 body {
   font-family: arial, sans-serif;
@@ -14,12 +18,13 @@ body {
 .nav-menu {
   ul {
     list-style: none;
-    padding: 1em 0;
+    padding: 10px 0;
+    padding-right: 20px;
     text-align: right;
 
     li {
       display: inline;
-      padding: 0 1.5em;
+      padding: 0 10px;
     }
 
     a {
@@ -44,6 +49,17 @@ body {
     display: flex;
     justify-content: center;
     padding: 25px 0;
+
+    .image-tag {
+        color: $image-tag-color;
+        position: relative;
+
+        span {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+    }
   }
 
   .google-query {
@@ -92,4 +108,84 @@ body {
       }
     }
   }
+}
+
+.footer {
+    width: 100%;
+    display: block;
+    background-color: $footer-color;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    line-height: 18px;
+
+    hr {
+        width: 100%;
+        border-top: 1px solid $footer-line-color;
+    }
+
+    ul {
+        list-style: none;
+        text-align: left;
+        padding-left: 10px;
+
+        li {
+            display: inline;
+            padding: 0 20px;
+            font-size: 14px;
+            color: $footer-text-color;
+        }
+
+        a {
+            text-decoration: none;
+            color: $footer-text-color;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+
+.footer-images {
+    width: 100%;
+    display: block;
+    border-top: 1px solid $footer-line-color;
+    background-color: $footer-color;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    line-height: 12px;
+
+    hr {
+        width: 100%;
+        border-top: 1px solid $footer-line-color;
+    }
+
+    ul {
+        list-style: none;
+        text-align: left;
+        padding-left: 20px;
+
+        li {
+            display: inline;
+            padding: 0 11px;
+            font-size: 14px;
+            color: $footer-text-color;
+        }
+
+        a {
+            text-decoration: none;
+            color: $footer-text-color;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
 }
