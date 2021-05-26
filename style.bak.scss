@@ -1,4 +1,4 @@
-
+$text-color: #212121;
 $search-color-border: #dfe1e5;
 $background-color: #f8f9fa;
 $box-shadow: rgba(0, 0, 0, .1);
@@ -9,23 +9,17 @@ $footer-color: #f2f2f2;
 $footer-text-color: #70757a;
 $footer-line-color: #dadce0;
 
-$text-color: #212121;
-
 body {
   font-family: arial, sans-serif;
   font-size: 14px;
 }
 
-.text {
-    color: $text-color;
-}
 
-
-// Top navbar style here
 .nav-menu {
   ul {
     list-style: none;
-    padding: 10px 20px 10px 0;
+    padding: 10px 0;
+    padding-right: 20px;
     text-align: right;
 
     li {
@@ -34,20 +28,19 @@ body {
     }
 
     a {
-    // ext-decoration: none;
+      color: $text-color;
       font-size: 13px;
+      text-decoration: none;
     }
   }
 }
 
 
-// Padding on top of search bar
 .top-search-padding {
   padding-top: 8%;
 }
 
 
-// Search section including logo, 
 .search-section {
   display: grid;
   justify-content: center;
@@ -117,8 +110,6 @@ body {
   }
 }
 
-
-// Footer single bar
 .footer {
     width: 100%;
     display: block;
@@ -158,16 +149,43 @@ body {
     }
 }
 
-// Alternate footer style for images page
+
 .footer-images {
+    width: 100%;
+    display: block;
     border-top: 1px solid $footer-line-color;
+    background-color: $footer-color;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
     line-height: 12px;
 
+    hr {
+        width: 100%;
+        border-top: 1px solid $footer-line-color;
+    }
+
     ul {
+        list-style: none;
+        text-align: left;
         padding-left: 20px;
 
         li {
+            display: inline;
             padding: 0 10px;
+            font-size: 14px;
+            color: $footer-text-color;
+        }
+
+        a {
+            text-decoration: none;
+            color: $footer-text-color;
+
+            &:hover {
+                text-decoration: underline;
+            }
         }
     }
 }
