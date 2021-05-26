@@ -1,41 +1,95 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Google</title>
+        <title>Google Advanced Search</title>
 
         <!-- Favicon -->
-        <link rel="shortcut icon" type="image/png" href="google_favicon.png"/>
+        <link rel="shortcut icon" type="image" href="favicon.ico"/>
 
         <!-- Stylesheets -->
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="style_shared.css">
+        <link rel="stylesheet" href="style_advanced.css">
     </head>
     <body>
-        <!-- Toolbar  -->
+
+        <!-- Toolbar and Icon -->
         <nav class="nav-menu">
             <ul>
-                <li><a href="index.html">Search</a></li>
-                <li><a href="images.html">Images</a></li>
+                <li class="override-float"><a href="index.html">
+                    <img src="google_logo.png" alt="Google Logo">
+                </a></li>
+                <li><a href="index.html">Google Search</a></li>
             </ul>
         </nav>
 
-        <div class="top-search-padding"></div>
+        <!-- Title  -->
+        <div class="title">
+            <span>Advanced Search</span>
+        </div>
+            
+        <!-- Divider Line -->
+        <div class="search-divider"></div>
 
-        <!-- Search Section -->
-        <div class="search-section">
-            <div class="google-logo">
-                <img src="google_logo.png">
+        <!-- Advanced Form -->
+        <div class="advanced-form">
+
+            <!-- Form Header -->
+            <div class="form-header">
+                <span class="left-header">Find Pages with...</span>
+                <span class="whitespace">  </span>
+                <span class="right-header">To do this in the search box.</span>
             </div>
 
-            <form action="https://google.com">
-                <div class="google-query">
-                    <input type="text">
+            <form action="https://google.com/search" method="GET">
+                <div class="search-row">
+                    <label for="q">All these words:</label>
+                    <input name="q" type="text">
+                    <span>Type the important words: tri-colour rat terrier</span>
                 </div>
 
-                <div class="google-buttons">
-                    <input type="button" value="Google">
-                    <input type="button" value="I'm Feeling Lucky">
+                <div class="search-row">
+                    <label for="as_epq">This exact word or phrase:</label>
+                    <input name="as_epq" type="text">
+                    <span>Put exact words in quotes: "rat terrier"</span>
+                </div>
+
+                <div class="search-row">
+                    <label for="as_oq">Any of these words:</label>
+                    <input name="as_oq" type="text">
+                    <span>Type OR between all the words you want: miniature OR standard</span>
+                </div>
+
+                <div class="search-row">
+                    <label for="as_eq">None of these words:</label>
+                    <input name="as_eq" type="text">
+                    <span>Put a minus sign just before words that you don't want: -rodent</span>
+                </div>
+
+                <span class="left-filler"></span>
+                <div class="search-btn-wrapper">
+                    <input class="search-btn" type="submit" value="Advanced Search">
                 </div>
             </form>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <ul>
+                <li>Country</li>
+            </ul>
+
+            <hr size="1">
+
+            <ul>
+                <li><a href="https://about.google">About</li>
+                <li><a href="https://ads.google.com">Advertising</li>
+                <li><a href="https://www.google.ch/services">Business</li>
+                <li><a href="https://www.google.com/search/howsearchworks">How Search works</li>
+                <!-- Align Right -->
+                <li class="footer-right right-most-li"><a href="">Settings</li>
+                <li class="footer-right"><a href="https://policies.google.com/terms">Terms</li>
+                <li class="footer-right"><a href="https://policies.google.com/privacy">Privacy</li>
+            </ul>
         </div>
     </body>
 </html>
